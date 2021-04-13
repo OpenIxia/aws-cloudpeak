@@ -14,12 +14,12 @@ Parameters:
     Type: String
 
   AvailabilityZone:
-    Description: 'Availability Zone where the CloudPeak server appliance will be deployed'
+    Description: 'Availability Zone where the Cloud Peak server appliance will be deployed'
     Type: AWS::EC2::AvailabilityZone::Name
     Default: us-east-1a
 
   VolumeSize:
-    Description: 'The size of the root volume for the CloudPeak server appliance.'
+    Description: 'The size of the root volume for the Cloud Peak server appliance.'
     Type: Number
     Default: 40
   
@@ -28,7 +28,7 @@ Parameters:
     Type: String
   
   InstanceType:
-    Description: 'The Instance Type for CloudPeak server appliance.'
+    Description: 'The Instance Type for Cloud Peak server appliance.'
     Type: String
     Default: t3.xlarge
     AllowedValues:
@@ -66,29 +66,37 @@ Parameters:
 Mappings:
   RegionMap:
     us-east-1:
-      AMIxAPPLICATION : "ami-0b3ee123ee4f4c81e"
+      AMIxAPPLICATION : "ami-0df88fc5b822cc8ba"
     us-east-2:
-      AMIxAPPLICATION : "ami-095bc6b17d991657f"
+      AMIxAPPLICATION : "ami-05d28eb2dc5abd818"
     us-west-1:
-      AMIxAPPLICATION : "ami-0d91ef7021f07e3c9"
+      AMIxAPPLICATION : "ami-09a470b194ef4d947"
     us-west-2:
-      AMIxAPPLICATION : "ami-02ccf44dd83679717"
+      AMIxAPPLICATION : "ami-09e42039b7ea9ae9f"
     ca-central-1:
-      AMIxAPPLICATION : "ami-057d4216e3df636ba"
+      AMIxAPPLICATION : "ami-012373a0648166423"
     eu-central-1:
-      AMIxAPPLICATION : "ami-0417a79ed30514cdc"
+      AMIxAPPLICATION : "ami-04619b17aad928eb4"
     eu-west-1:
-      AMIxAPPLICATION : "ami-041fbb88150113904"
+      AMIxAPPLICATION : "ami-0a09ea1cd4257b5e2"
     eu-west-2:
-      AMIxAPPLICATION : "ami-0027e7629b3ce508b"
+      AMIxAPPLICATION : "ami-00067351bd633e212"
     eu-west-3:
-      AMIxAPPLICATION : "ami-005c48f7bcb16732e"
+      AMIxAPPLICATION : "ami-078e0b2d50a2e6714"
     eu-north-1:
-      AMIxAPPLICATION : "ami-04f89ede0f70bc502"
+      AMIxAPPLICATION : "ami-0b26022d79d801805"
+    ap-northeast-2:
+      AMIxAPPLICATION : "ami-0ec13ad133df24f2b"
+    ap-southeast-2:
+      AMIxAPPLICATION : "ami-0ae1a4c87589a4842"
+    ap-northeast-1:
+      AMIxAPPLICATION : "ami-067aa7ad3a3559111"
     ap-southeast-1:
-      AMIxAPPLICATION : "ami-004fb9287fc51e1b6"
+      AMIxAPPLICATION : "ami-077d66a6e75c1e0b6"
     ap-south-1:
-      AMIxAPPLICATION : "ami-015c7a3cb68b31a17"
+      AMIxAPPLICATION : "ami-0c88a49a028ec6350"
+    sa-east-1:
+      AMIxAPPLICATION : "ami-013b9d6ef6bdc0aa4"
 
 Resources:
   VPC:
@@ -290,7 +298,7 @@ Resources:
                   client = boto3.client('ec2')
                   response = client.create_security_group(
                       GroupName='CPServerSecGroup',
-                      Description='Security group for CloudPeak Server',
+                      Description='Security group for Cloud Peak Server',
                       VpcId=vpc_id
                   )
                   security_group_id = response['GroupId']                
@@ -417,7 +425,7 @@ Outputs:
       Fn::GetAtt:
         - CPServer
         - PublicIp
-    Description: "The Public IP of CloudPeak Server Appliance"
+    Description: "The Public IP of Cloud Peak Server Appliance"
   ElasticIp:
     Value: !Ref ElasticIP
-    Description: "The Elastic IP of CloudPeak Server Appliance"
+    Description: "The Elastic IP of Cloud Peak Server Appliance"

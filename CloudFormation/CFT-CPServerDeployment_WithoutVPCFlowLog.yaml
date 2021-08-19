@@ -37,6 +37,10 @@ Parameters:
     - t3a.xlarge
     - c5.xlarge
   
+  PubKeyName:
+    Description: Name of the public key pair to be used to launch instance
+    Type: AWS::EC2::KeyPair::KeyName
+  
   VPCSubnetCidr:
     Description: 'CIDR for the VPC created for Cloud Peak server deployment.'
     Type: String

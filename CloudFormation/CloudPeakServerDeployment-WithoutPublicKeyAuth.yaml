@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: "2010-09-09"
 
-Description: "\n    Stack creating a VPC and launch EC2 instances within it.\n    **WARNING** This template creates Amazon EC2 instances with public key authentication..\n    You will be billed for the AWS resources used if you create\n    a stack from this template. **WARNING** This template creates\n    role for creating/modifying seurity group.\n    This role will invoke AWSLambdaBasicExecutionRole, Please check\n    AWS Documentation for details on AWSLambdaBasicExecutionRole."
+Description: "\n    Stack creating a VPC and launch EC2 instances within it.\n    **WARNING** This template creates Amazon EC2 instances.\n    You will be billed for the AWS resources used if you create\n    a stack from this template. **WARNING** This template creates\n    role for creating/modifying seurity group.\n    This role will invoke AWSLambdaBasicExecutionRole, Please check\n    AWS Documentation for details on AWSLambdaBasicExecutionRole."
 
 Parameters:
   UserEmailTag:
@@ -37,10 +37,6 @@ Parameters:
     - t3a.xlarge
     - c5.xlarge
   
-  PubKeyName:
-    Description: Name of the public key pair to be used to launch instance
-    Type: AWS::EC2::KeyPair::KeyName
-  
   VPCSubnetCidr:
     Description: 'CIDR for the VPC created for Cloud Peak server deployment.'
     Type: String
@@ -51,37 +47,37 @@ Parameters:
 Mappings:
   RegionMap:
     us-east-1:
-      AMIxAPPLICATION : "ami-08ae2a0be6e5a19e7"
+      AMIxAPPLICATION : "ami-0df88fc5b822cc8ba"
     us-east-2:
-      AMIxAPPLICATION : "ami-0838eaa90aeeffc9c"
+      AMIxAPPLICATION : "ami-05d28eb2dc5abd818"
     us-west-1:
-      AMIxAPPLICATION : "ami-0f70d7e15b9ac5f32"
+      AMIxAPPLICATION : "ami-09a470b194ef4d947"
     us-west-2:
-      AMIxAPPLICATION : "ami-0ad52b0cf0321a7d0"
+      AMIxAPPLICATION : "ami-09e42039b7ea9ae9f"
     ca-central-1:
-      AMIxAPPLICATION : "ami-069cb4387658ce375"
+      AMIxAPPLICATION : "ami-012373a0648166423"
     eu-central-1:
-      AMIxAPPLICATION : "ami-06cae4ccc5db76c04"
+      AMIxAPPLICATION : "ami-04619b17aad928eb4"
     eu-west-1:
-      AMIxAPPLICATION : "ami-012ef646d7277549c"
+      AMIxAPPLICATION : "ami-0a09ea1cd4257b5e2"
     eu-west-2:
-      AMIxAPPLICATION : "ami-0123d718a5805e194"
+      AMIxAPPLICATION : "ami-00067351bd633e212"
     eu-west-3:
-      AMIxAPPLICATION : "ami-0b401450cd5af6dfc"
+      AMIxAPPLICATION : "ami-078e0b2d50a2e6714"
     eu-north-1:
-      AMIxAPPLICATION : "ami-07af2ebb77437ac17"
+      AMIxAPPLICATION : "ami-0b26022d79d801805"
     ap-northeast-2:
-      AMIxAPPLICATION : "ami-06a49b726670a12af"
+      AMIxAPPLICATION : "ami-0ec13ad133df24f2b"
     ap-southeast-2:
-      AMIxAPPLICATION : "ami-0f19b6a52b272b2b1"
+      AMIxAPPLICATION : "ami-0ae1a4c87589a4842"
     ap-northeast-1:
-      AMIxAPPLICATION : "ami-02f9c6e4f3f41e3d3"
+      AMIxAPPLICATION : "ami-067aa7ad3a3559111"
     ap-southeast-1:
-      AMIxAPPLICATION : "ami-07684d5d0ee618c46"
+      AMIxAPPLICATION : "ami-077d66a6e75c1e0b6"
     ap-south-1:
-      AMIxAPPLICATION : "ami-0fb3a6c04ba69d0db"
+      AMIxAPPLICATION : "ami-0c88a49a028ec6350"
     sa-east-1:
-      AMIxAPPLICATION : "ami-0d09b618ecb2a4a1f"
+      AMIxAPPLICATION : "ami-013b9d6ef6bdc0aa4"
 
 Resources:
   VPC:
@@ -365,7 +361,6 @@ Resources:
         - RegionMap
         - !Ref AWS::Region
         - AMIxAPPLICATION
-      KeyName: !Ref PubKeyName
       BlockDeviceMappings:
         - DeviceName: "/dev/sda1"
           Ebs:

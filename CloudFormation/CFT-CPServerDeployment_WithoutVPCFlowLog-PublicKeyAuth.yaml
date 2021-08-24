@@ -51,37 +51,37 @@ Parameters:
 Mappings:
   RegionMap:
     us-east-1:
-      AMIxAPPLICATION : "ami-0df88fc5b822cc8ba"
+      AMIxAPPLICATION : "ami-08ae2a0be6e5a19e7"
     us-east-2:
-      AMIxAPPLICATION : "ami-05d28eb2dc5abd818"
+      AMIxAPPLICATION : "ami-0838eaa90aeeffc9c"
     us-west-1:
-      AMIxAPPLICATION : "ami-09a470b194ef4d947"
+      AMIxAPPLICATION : "ami-0f70d7e15b9ac5f32"
     us-west-2:
-      AMIxAPPLICATION : "ami-09e42039b7ea9ae9f"
+      AMIxAPPLICATION : "ami-0ad52b0cf0321a7d0"
     ca-central-1:
-      AMIxAPPLICATION : "ami-02c1cd4f6f2cee549"
+      AMIxAPPLICATION : "ami-069cb4387658ce375"
     eu-central-1:
-      AMIxAPPLICATION : "ami-04619b17aad928eb4"
+      AMIxAPPLICATION : "ami-06cae4ccc5db76c04"
     eu-west-1:
-      AMIxAPPLICATION : "ami-0a09ea1cd4257b5e2"
+      AMIxAPPLICATION : "ami-012ef646d7277549c"
     eu-west-2:
-      AMIxAPPLICATION : "ami-00067351bd633e212"
+      AMIxAPPLICATION : "ami-0123d718a5805e194"
     eu-west-3:
-      AMIxAPPLICATION : "ami-078e0b2d50a2e6714"
+      AMIxAPPLICATION : "ami-0b401450cd5af6dfc"
     eu-north-1:
-      AMIxAPPLICATION : "ami-0b26022d79d801805"
+      AMIxAPPLICATION : "ami-07af2ebb77437ac17"
     ap-northeast-2:
-      AMIxAPPLICATION : "ami-0ec13ad133df24f2b"
+      AMIxAPPLICATION : "ami-06a49b726670a12af"
     ap-southeast-2:
-      AMIxAPPLICATION : "ami-0ae1a4c87589a4842"
+      AMIxAPPLICATION : "ami-0f19b6a52b272b2b1"
     ap-northeast-1:
-      AMIxAPPLICATION : "ami-067aa7ad3a3559111"
+      AMIxAPPLICATION : "ami-02f9c6e4f3f41e3d3"
     ap-southeast-1:
-      AMIxAPPLICATION : "ami-077d66a6e75c1e0b6"
+      AMIxAPPLICATION : "ami-07684d5d0ee618c46"
     ap-south-1:
-      AMIxAPPLICATION : "ami-0c88a49a028ec6350"
+      AMIxAPPLICATION : "ami-0fb3a6c04ba69d0db"
     sa-east-1:
-      AMIxAPPLICATION : "ami-013b9d6ef6bdc0aa4"
+      AMIxAPPLICATION : "ami-0d09b618ecb2a4a1f"
 
 Resources:
   VPC:

@@ -74,7 +74,7 @@ Mappings:
     us-west-2:
       AMIxAPPLICATION : "ami-0ad52b0cf0321a7d0"
     ca-central-1:
-      AMIxAPPLICATION : "ami-069cb4387658ce375"
+      AMIxAPPLICATION : "ami-05d19f64699ba560b"
     eu-central-1:
       AMIxAPPLICATION : "ami-06cae4ccc5db76c04"
     eu-west-1:

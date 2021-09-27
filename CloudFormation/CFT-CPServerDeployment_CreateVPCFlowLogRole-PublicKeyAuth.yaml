@@ -74,9 +74,9 @@ Mappings:
     us-west-2:
       AMIxAPPLICATION : "ami-0ad52b0cf0321a7d0"
     ca-central-1:
-      AMIxAPPLICATION : "ami-05d19f64699ba560b"
+      AMIxAPPLICATION : "ami-04311e7a3b85d956c"
     eu-central-1:
-      AMIxAPPLICATION : "ami-06cae4ccc5db76c04"
+      AMIxAPPLICATION : "ami-005384680d150551b"
     eu-west-1:
       AMIxAPPLICATION : "ami-012ef646d7277549c"
     eu-west-2:
@@ -94,7 +94,7 @@ Mappings:
     ap-southeast-1:
       AMIxAPPLICATION : "ami-07684d5d0ee618c46"
     ap-south-1:
-      AMIxAPPLICATION : "ami-0fb3a6c04ba69d0db"
+      AMIxAPPLICATION : "ami-03b4f73fff7f0a77d"
     sa-east-1:
       AMIxAPPLICATION : "ami-0d09b618ecb2a4a1f"
 
